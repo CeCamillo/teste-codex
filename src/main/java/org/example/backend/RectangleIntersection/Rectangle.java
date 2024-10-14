@@ -3,7 +3,7 @@ package org.example.backend.RectangleIntersection;
 import lombok.Data;
 
 @Data
-public class Square {
+public class Rectangle {
     public int x1;
     public int y1;
     public int x2;

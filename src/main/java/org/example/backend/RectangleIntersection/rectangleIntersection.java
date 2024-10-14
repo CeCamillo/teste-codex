@@ -1,13 +1,23 @@
 package org.example.backend.RectangleIntersection;
 
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(value = "intersection")
 public class rectangleIntersection {
-    Integer rows = 8;
-    Integer cols = 8;
 
-//    public intersectionCheck(Square square1, Square square2) {
-//        if ((square1.x1 <= square2.) & (right1 >= left2) & (bottom1 <= top2) & (top1 >= bottom2)) {
-//            return false;
-//        }
-//    }
+    @PostMapping
+    public boolean intersectionCheck(@RequestBody String coordinates) {
 
+        Rectangle rectA =
+                Rectangle rectB =
+                Rectangle rectC =
+
+
+        if ((rect1.x1 <= rect2.x2) & (rect1.x2 >= rect2.x1) & (rect1.y1 <= rect2.y2) & (rect1.y2 >= rect2.y1)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
