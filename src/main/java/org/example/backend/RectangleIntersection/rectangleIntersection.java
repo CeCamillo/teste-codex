@@ -3,21 +3,18 @@ package org.example.backend.RectangleIntersection;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "intersection")
+@RequestMapping(value = "rectangles")
 public class rectangleIntersection {
 
-    @PostMapping
-    public boolean intersectionCheck(@RequestBody String coordinates) {
+    @PostMapping(value = "intersection")
+    public boolean intersectionCheck(@RequestBody Rectangles rectangle) {
 
-        Rectangle rectA =
-                Rectangle rectB =
-                Rectangle rectC =
+        int[] rectA = rectangle.getRectA();
+        int[] rectB = rectangle.getRectB();
 
-
-        if ((rect1.x1 <= rect2.x2) & (rect1.x2 >= rect2.x1) & (rect1.y1 <= rect2.y2) & (rect1.y2 >= rect2.y1)) {
+        if ((rectA[2] > rectB[0] && rectA[3] > rectB[1]) && (rectA[0] < rectB[2] && rectA[1] < rectB[3])) {
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
 }
