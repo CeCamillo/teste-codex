@@ -17,6 +17,7 @@ The whole resolution is presented as an API, each exercise corresponds as one en
 The API was built using Java Spring Boot
 
 ## 1. CNPJ Validator
+![](./cnpj.gif)
 
 ### Description
 
@@ -40,6 +41,7 @@ Checks if a CNPJ is valid or not
 * Non-digit characters are removed using the `removeNonDigits` method
 
 ## 2. Rectangle Intersection
+![](./intersection.gif)
 
 ### Description
 
@@ -59,6 +61,7 @@ Returns if 2 rectangles intersect with each other
 ```
 
 ## 4. Simple Todo List
+![](./todo.gif)
 
 ### Description
 
@@ -114,6 +117,7 @@ ToDo List was built using JPA and H2 DataBase
 
 
 ## 5. World Clock Client
+![](./clockclient.gif)
 
 ### Description
 
@@ -135,6 +139,7 @@ Queries WorldClockApi for the current UTC time.
 * The `WorldClockClientController` class handles the HTTP GET request to the `/clockclient` endpoint
 
 ## 6. World Clock Server
+![](./clockserver.gif)
 
 ### Description
 

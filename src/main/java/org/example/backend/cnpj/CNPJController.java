@@ -12,10 +12,10 @@ public class CNPJController {
     }
 
     @PostMapping
-    public boolean checkDigit(@RequestBody String stdin) {
+    public boolean checkDigit(@RequestBody String cnpj) {
         String verificacao1 = "543298765432";
         String verificacao2 = "6543298765432";
-        String filteredStdin = removeNonDigits(stdin);
+        String filteredStdin = removeNonDigits(cnpj);
         String digitsToVerify = filteredStdin.substring(0, filteredStdin.length() - 1);
         digitsToVerify = digitsToVerify.substring(0, filteredStdin.length() - 2);
         Integer digit1 = 0;
@@ -28,7 +28,7 @@ public class CNPJController {
         } else {
             digit1 = 11- digit1%11;
         }
-        stdin = stdin + digit1;
+        cnpj = cnpj + digit1;
         digitsToVerify += digit1;
 
         Integer digit2 = 0;
@@ -41,11 +41,11 @@ public class CNPJController {
             digit2 = 11- digit2%11;
         }
 
-        stdin = stdin + digit2;
-        System.out.println(stdin);
+        cnpj = cnpj + digit2;
+        System.out.println(cnpj);
 
         System.out.println(Integer.toString(digit1) + Integer.toString(digit2));
-        System.out.println(stdin.substring(filteredStdin.length()-2));
+        System.out.println(cnpj.substring(filteredStdin.length()-2));
 
         if ((Integer.toString(digit1) + Integer.toString(digit2)).equals(filteredStdin.substring(filteredStdin.length() - 2))) {
             return true;
